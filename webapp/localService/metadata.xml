@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZEDOCUMENT_SRV" xml:lang="it" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="eDocument" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EdocGuid"/>
+                </Key>
+                <Property Name="EdocGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="eDocument: GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SeqNo" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="N. progressivo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bukrs" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Società" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Land" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Paese" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SourceType" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Tipo sorgente" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SourceKey" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="ChSorg.eDoc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EdocType" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Tipo eDoc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProcStatus" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Stato elabor." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Logsys" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Sistema logico" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Autore modifica" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data modifica" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeTime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Data modifica" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Aut. creazione" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreateDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data creazione" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CreateTime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Ora creazione" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Process" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Proc. eDoc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LastProcstep" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Ult. fase proc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LastProcstepVariant" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Ult. variante" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ErrorFlag" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Errore" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProcessVersion" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Vers. proc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DocrefSeqnr" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="N.progr. rif. doc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Riepilogo stato" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PostingDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Data di reg." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Contingency" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Sit.eccezionale" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Metastatus" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Stato" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RefProcess" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Proc. rif." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EdocumentClass" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Nome cl.eDoc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ArchivePrep" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Elim. prel. archiv." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InterfaceType" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Tipo interf." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ApprovalId" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="ID approvazione" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InterfaceGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="GUID interf." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FileGuid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="GUID file" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ResponseCode" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Codice risposta" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InterfaceId" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="ID interf." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IntVersion" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Versione" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CountArchive" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Contat. arch." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityContainer Name="ZEDOCUMENT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="eDocumentSet" EntityType="ZEDOCUMENT_SRV.eDocument" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://orogeldev:44333/sap/opu/odata/sap/ZEDOCUMENT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://orogeldev:44333/sap/opu/odata/sap/ZEDOCUMENT_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

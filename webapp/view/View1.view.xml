@@ -1,0 +1,79 @@
+<mvc:View controllerName="it.orogel.edocument.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:t="sap.ui.table">
+    <Shell id="shell" appWidthLimited="false">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content>
+                        <!--<smartTable:SmartTable id="LineItemsSmartTable" initiallyVisibleFields="{i18n>outputField}" entitySet="eDocumentSet" tableType="Table" enableExport="false" useVariantManagement="false" useTablePersonalisation="false" header="eDocument" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" class="sapUiResponsiveContentPadding sapUiSizeCompact" enableAutoColumnWidth="true" editTogglable="false" app:useSmartField="true">
+                <smartTable:customToolbar>
+                    <OverflowToolbar>
+                        <ToolbarSpacer/>
+                        <OverflowToolbarButton icon="sap-icon://download" press="onAction" tooltip="Scarica XML" />
+                        <OverflowToolbarButton icon="sap-icon://paper-plane" press="onAction" tooltip="Invia XML" />
+                    </OverflowToolbar>
+                </smartTable:customToolbar>-->
+                        <!-- layout data used to make the table growing but the filter bar fixed -->
+                        <!--<smartTable:layoutData>
+                <FlexItemData growFactor="1" baseSize="0%"/>
+            </smartTable:layoutData>
+        </smartTable:SmartTable>-->
+                        <FlexBox alignItems="Start" justifyContent="End">
+                            <Button type="Emphasized" icon="sap-icon://download" press="onAction" tooltip="Scarica XML" class="sapUiMediumMarginBeginEnd"/>
+                            <Button type="Emphasized" icon="sap-icon://paper-plane" press="onAction" tooltip="Invia XML" class="sapUiMediumMarginBeginEnd"/>
+                            <Button type="Emphasized" icon="sap-icon://excel-attachment" press="onExport" tooltip="Esporta Excel" class="sapUiMediumMarginBeginEnd"/>
+                        </FlexBox>
+                        <t:Table id="Edocument" rows="{appModel>/rows}" selectionMode="MultiToggle" visibleRowCountMode="Interactive" ariaLabelledBy="title" alternateRowColors="true" enableCellFilter="true" columnHeaderVisible="true" showNoData="true">
+                            <t:columns>
+                                <t:Column hAlign="Begin" resizable="true" autoResizable="true" filterProperty="ProcStatus" sortProperty="ProcStatus" width="10em">
+                                    <Label text="{i18n>lbl.ProcStatus}"/>
+                                    <t:template>
+                                        <Text text="{ProcStatus}" wrapping="false"/>
+                                    </t:template>
+                                </t:Column>
+                                <t:Column hAlign="Begin" resizable="true" autoResizable="true" filterProperty="EdocGuid" sortProperty="EdocGuid">
+                                    <Label text="{i18n>lbl.EdocGuid}"/>
+                                    <t:template>
+                                        <Text text="{EdocGuid}" wrapping="false"/>
+                                    </t:template>
+                                </t:Column>
+                                <t:Column hAlign="Begin" resizable="true" autoResizable="true" filterProperty="SeqNo" sortProperty="SeqNo" width="10em">
+                                    <Label text="{i18n>lbl.SeqNo}"/>
+                                    <t:template>
+                                        <Text text="{SeqNo}" wrapping="false"/>
+                                    </t:template>
+                                </t:Column>
+                                <t:Column hAlign="Begin" resizable="true" autoResizable="true" filterProperty="Bukrs" sortProperty="Bukrs" width="5em">
+                                    <Label text="{i18n>lbl.Bukrs}"/>
+                                    <t:template>
+                                        <Text text="{Bukrs}" wrapping="false"/>
+                                    </t:template>
+                                </t:Column>
+                                <t:Column hAlign="Begin" resizable="true" autoResizable="true" filterProperty="Land" sortProperty="Land" width="5em">
+                                    <Label text="{i18n>lbl.Land}"/>
+                                    <t:template>
+                                        <Text text="{Land}" wrapping="false"/>
+                                    </t:template>
+                                </t:Column>
+                                <t:Column hAlign="Begin" resizable="true" autoResizable="true" filterProperty="SourceType" sortProperty="SourceType" width="10em">
+                                    <Label text="{i18n>lbl.SourceType}"/>
+                                    <t:template>
+                                        <Text text="{SourceType}" wrapping="false"/>
+                                    </t:template>
+                                </t:Column>
+                                <t:Column hAlign="Begin" resizable="true" autoResizable="true" filterProperty="SourceKey" sortProperty="SourceKey" width="10em">
+                                    <Label text="{i18n>lbl.SourceKey}"/>
+                                    <t:template>
+                                        <Text text="{SourceKey}" wrapping="false"/>
+                                    </t:template>
+                                </t:Column>
+                            </t:columns>
+                        </t:Table>
+                    </content>
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>
